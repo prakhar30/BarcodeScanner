@@ -15,6 +15,7 @@
 		C0B2A8C924E90EFC0043D18A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8C824E90EFC0043D18A /* HomeViewController.swift */; };
 		C0B2A8CC24E911BC0043D18A /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8CB24E911BC0043D18A /* ProductsTableViewCell.swift */; };
 		C0B2A8CF24E912830043D18A /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8CE24E912830043D18A /* Products.swift */; };
+		C0B2A8D224E9141E0043D18A /* ProductsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8D124E9141E0043D18A /* ProductsDB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		C0B2A8C824E90EFC0043D18A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C0B2A8CB24E911BC0043D18A /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		C0B2A8CE24E912830043D18A /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		C0B2A8D124E9141E0043D18A /* ProductsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		C0925B9C24E90AAA008F7730 /* Barcode Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				C0B2A8D024E9140D0043D18A /* DataSource */,
 				C0B2A8CD24E912710043D18A /* Models */,
 				C0B2A8CA24E911A50043D18A /* UITableViewCells */,
 				C0925B9D24E90AAA008F7730 /* AppDelegate.swift */,
@@ -116,6 +119,14 @@
 				C0B2A8CE24E912830043D18A /* Products.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C0B2A8D024E9140D0043D18A /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				C0B2A8D124E9141E0043D18A /* ProductsDB.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +233,7 @@
 				C0B2A8CC24E911BC0043D18A /* ProductsTableViewCell.swift in Sources */,
 				C0B2A8CF24E912830043D18A /* Products.swift in Sources */,
 				C0925B9E24E90AAA008F7730 /* AppDelegate.swift in Sources */,
+				C0B2A8D224E9141E0043D18A /* ProductsDB.swift in Sources */,
 				C0B2A8C924E90EFC0043D18A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
