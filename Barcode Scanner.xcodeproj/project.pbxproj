@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C0925B9E24E90AAA008F7730 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0925B9D24E90AAA008F7730 /* AppDelegate.swift */; };
-		C0925BA224E90AAA008F7730 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0925BA124E90AAA008F7730 /* ViewController.swift */; };
 		C0925BA524E90AAA008F7730 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0925BA324E90AAA008F7730 /* Main.storyboard */; };
 		C0925BA724E90AAB008F7730 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0925BA624E90AAB008F7730 /* Assets.xcassets */; };
 		C0925BAA24E90AAB008F7730 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0925BA824E90AAB008F7730 /* LaunchScreen.storyboard */; };
 		C0925BB524E90AAB008F7730 /* Barcode_ScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0925BB424E90AAB008F7730 /* Barcode_ScannerTests.swift */; };
+		C0B2A8C924E90EFC0043D18A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8C824E90EFC0043D18A /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +28,6 @@
 /* Begin PBXFileReference section */
 		C0925B9A24E90AAA008F7730 /* Barcode Scanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Barcode Scanner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0925B9D24E90AAA008F7730 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C0925BA124E90AAA008F7730 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0925BA424E90AAA008F7730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0925BA624E90AAB008F7730 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0925BA924E90AAB008F7730 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +35,7 @@
 		C0925BB024E90AAB008F7730 /* Barcode ScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Barcode ScannerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0925BB424E90AAB008F7730 /* Barcode_ScannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Barcode_ScannerTests.swift; sourceTree = "<group>"; };
 		C0925BB624E90AAB008F7730 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B2A8C824E90EFC0043D18A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				C0925B9D24E90AAA008F7730 /* AppDelegate.swift */,
-				C0925BA124E90AAA008F7730 /* ViewController.swift */,
 				C0925BA324E90AAA008F7730 /* Main.storyboard */,
 				C0925BA624E90AAB008F7730 /* Assets.xcassets */,
 				C0925BA824E90AAB008F7730 /* LaunchScreen.storyboard */,
 				C0925BAB24E90AAB008F7730 /* Info.plist */,
+				C0B2A8C824E90EFC0043D18A /* HomeViewController.swift */,
 			);
 			path = "Barcode Scanner";
 			sourceTree = "<group>";
@@ -197,8 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0925BA224E90AAA008F7730 /* ViewController.swift in Sources */,
 				C0925B9E24E90AAA008F7730 /* AppDelegate.swift in Sources */,
+				C0B2A8C924E90EFC0043D18A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
