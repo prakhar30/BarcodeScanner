@@ -14,10 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyCartView: UIView!
     @IBOutlet weak var scanProductButton: UIButton!
     
-    var products = [String]()
+    var products = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupViews()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -28,6 +29,10 @@ class HomeViewController: UIViewController {
     @IBAction func scanProductButtonAction(_ sender: Any) {
     }
     
+    func setupViews() {
+        self.tableView.tableFooterView = UIView()
+    }
+    
     func refreshView() {
         if products.count > 0 {
             emptyCartView.isHidden = true
@@ -36,5 +41,17 @@ class HomeViewController: UIViewController {
             emptyCartView.isHidden = false
             tableView.isHidden = true
         }
+    }
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return products.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: ProductsTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as! ProductsTableViewCell
+        cell.setValues(product: products[indexPath.row])
+        return cell
     }
 }
