@@ -7,6 +7,10 @@
 //
 
 import UIKit
+protocol ProductScannedSuccess: class {
+    func productScanned(product: Product)
+    func wrongProductScanned()
+}
 
 class HomeViewController: UIViewController {
 
@@ -14,7 +18,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var emptyCartView: UIView!
     @IBOutlet weak var scanProductButton: UIButton!
     
-    var products = [Product]()
+    var products = [Product]() {
+        didSet {
+            self.refreshView()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +35,12 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func scanProductButtonAction(_ sender: Any) {
+        DispatchQueue.main.async {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraViewController_ID") as! CameraViewController
+            cameraVC.delegate = self
+            self.present(cameraVC, animated: true, completion: nil)
+        }
     }
     
     func setupViews() {
@@ -37,6 +51,7 @@ class HomeViewController: UIViewController {
         if products.count > 0 {
             emptyCartView.isHidden = true
             tableView.isHidden = false
+            tableView.reloadData()
         } else {
             emptyCartView.isHidden = false
             tableView.isHidden = true
@@ -53,5 +68,17 @@ extension HomeViewController: UITableViewDataSource {
         let cell: ProductsTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as! ProductsTableViewCell
         cell.setValues(product: products[indexPath.row])
         return cell
+    }
+}
+
+extension HomeViewController: ProductScannedSuccess {
+    func wrongProductScanned() {
+        let alert = UIAlertController(title: "Wrong Code Scanned", message: "Please try again.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func productScanned(product: Product) {
+        self.products.append(product)
     }
 }

@@ -16,6 +16,8 @@
 		C0B2A8CC24E911BC0043D18A /* ProductsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8CB24E911BC0043D18A /* ProductsTableViewCell.swift */; };
 		C0B2A8CF24E912830043D18A /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8CE24E912830043D18A /* Products.swift */; };
 		C0B2A8D224E9141E0043D18A /* ProductsDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B2A8D124E9141E0043D18A /* ProductsDB.swift */; };
+		C0E8034B24E916F20034B7E1 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8034A24E916F20034B7E1 /* CameraViewController.swift */; };
+		C0E8034E24E9176A0034B7E1 /* CameraHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E8034D24E9176A0034B7E1 /* CameraHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		C0B2A8CB24E911BC0043D18A /* ProductsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewCell.swift; sourceTree = "<group>"; };
 		C0B2A8CE24E912830043D18A /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		C0B2A8D124E9141E0043D18A /* ProductsDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDB.swift; sourceTree = "<group>"; };
+		C0E8034A24E916F20034B7E1 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		C0E8034D24E9176A0034B7E1 /* CameraHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 		C0925B9C24E90AAA008F7730 /* Barcode Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				C0E8034C24E9175A0034B7E1 /* Helpers */,
 				C0B2A8D324E916990043D18A /* ViewControllers */,
 				C0B2A8D024E9140D0043D18A /* DataSource */,
 				C0B2A8CD24E912710043D18A /* Models */,
@@ -133,8 +138,17 @@
 			isa = PBXGroup;
 			children = (
 				C0B2A8C824E90EFC0043D18A /* HomeViewController.swift */,
+				C0E8034A24E916F20034B7E1 /* CameraViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		C0E8034C24E9175A0034B7E1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C0E8034D24E9176A0034B7E1 /* CameraHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +257,8 @@
 				C0925B9E24E90AAA008F7730 /* AppDelegate.swift in Sources */,
 				C0B2A8D224E9141E0043D18A /* ProductsDB.swift in Sources */,
 				C0B2A8C924E90EFC0043D18A /* HomeViewController.swift in Sources */,
+				C0E8034B24E916F20034B7E1 /* CameraViewController.swift in Sources */,
+				C0E8034E24E9176A0034B7E1 /* CameraHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
