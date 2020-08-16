@@ -18,7 +18,9 @@ class CameraHelper: NSObject, AVCaptureMetadataOutputObjectsDelegate {
     func metadataOutput(_ captureOutput: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         // Get the metadata object.
-        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        guard let metadataObj = metadataObjects.first as? AVMetadataMachineReadableCodeObject else {
+            return
+        }
         
         if supportedCodeTypes.contains(metadataObj.type) {
             if metadataObj.stringValue != nil {
@@ -39,7 +41,11 @@ class CameraHelper: NSObject, AVCaptureMetadataOutputObjectsDelegate {
                               AVMetadataObject.ObjectType.ean13,
                               AVMetadataObject.ObjectType.aztec,
                               AVMetadataObject.ObjectType.pdf417,
-                              AVMetadataObject.ObjectType.qr]
+                              AVMetadataObject.ObjectType.qr,
+                              AVMetadataObject.ObjectType.itf14,
+                              AVMetadataObject.ObjectType.interleaved2of5,
+                              AVMetadataObject.ObjectType.dataMatrix]
+    
     weak var delegate: ProductScanned?
     
     func loadCamera(cameraView: UIView) {
